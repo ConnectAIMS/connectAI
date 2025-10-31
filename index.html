@@ -6,27 +6,28 @@
   <title>ConnectAI | Desenvolvimento Web e Soluções Inteligentes</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #2563eb;
-      --primary-dark: #1d4ed8;
-      --secondary: #0f172a;
-      --accent: #1e293b;
-      --accent-light: #334155;
-      --light: #f8fafc;
-      --text: #e2e8f0;
-      --text-light: #94a3b8;
-      --gradient: linear-gradient(135deg, var(--primary), #7c3aed);
-      --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
-      --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+      --primary: #00f0ff;
+      --primary-dark: #00a6b3;
+      --secondary: #0a0a1f;
+      --accent: #1a1a3a;
+      --accent-light: #2a2a5a;
+      --light: #f0f8ff;
+      --text: #e0f0ff;
+      --text-light: #a0b0ff;
+      --gradient: linear-gradient(135deg, var(--primary), #7d3cff);
+      --neon-glow: 0 0 10px var(--primary), 0 0 20px var(--primary), 0 0 30px var(--primary);
+      --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+      --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
     }
 
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
+      font-family: "Exo 2", sans-serif;
     }
 
     body {
@@ -34,6 +35,10 @@
       color: var(--text);
       scroll-behavior: smooth;
       line-height: 1.6;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(0, 240, 255, 0.05) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(125, 60, 255, 0.05) 0%, transparent 20%);
     }
 
     .container {
@@ -43,77 +48,118 @@
     }
 
     header {
-      background: var(--gradient);
+      background: linear-gradient(rgba(10, 10, 31, 0.9), rgba(10, 10, 31, 0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="%2300f0ff" stroke-width="1" opacity="0.2"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
       color: white;
       text-align: center;
-      padding: 100px 20px 80px;
+      padding: 150px 20px 100px;
       position: relative;
       overflow: hidden;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    header::before {
-      content: "";
+    .matrix-bg {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
-      opacity: 0.3;
+      opacity: 0.1;
+      z-index: 0;
     }
 
     .logo-container {
-      margin-bottom: 30px;
+      margin-bottom: 40px;
       position: relative;
-      z-index: 1;
+      z-index: 2;
     }
 
     .logo {
-      width: 120px;
-      height: 120px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(0, 240, 255, 0.1);
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 0 auto;
       backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      box-shadow: var(--shadow);
+      border: 2px solid rgba(0, 240, 255, 0.3);
+      box-shadow: var(--neon-glow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .logo::before {
+      content: "";
+      position: absolute;
+      width: 150%;
+      height: 150%;
+      background: conic-gradient(transparent, var(--primary), transparent 30%);
+      animation: rotate 4s linear infinite;
+    }
+
+    .logo::after {
+      content: "";
+      position: absolute;
+      width: 170px;
+      height: 170px;
+      background: var(--secondary);
+      border-radius: 50%;
     }
 
     .logo i {
-      font-size: 50px;
-      color: white;
+      font-size: 70px;
+      color: var(--primary);
+      z-index: 1;
+      text-shadow: var(--neon-glow);
     }
 
     header h1 {
-      font-size: 3.5rem;
-      margin-bottom: 15px;
-      font-weight: 700;
+      font-size: 4.5rem;
+      margin-bottom: 20px;
+      font-weight: 900;
       position: relative;
       z-index: 1;
+      font-family: "Orbitron", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      text-shadow: var(--neon-glow);
+      background: linear-gradient(to right, var(--primary), #7d3cff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     header p {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       opacity: 0.9;
-      max-width: 700px;
+      max-width: 800px;
       margin: 0 auto;
       position: relative;
       z-index: 1;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+
+    .typing-text {
+      border-right: 2px solid var(--primary);
+      animation: blink 1s infinite;
+      padding-right: 5px;
     }
 
     nav {
       display: flex;
       justify-content: center;
-      background-color: rgba(15, 23, 42, 0.9);
+      background-color: rgba(10, 10, 31, 0.95);
       padding: 20px 0;
       position: sticky;
       top: 0;
       z-index: 1000;
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
 
     nav a {
@@ -124,6 +170,9 @@
       transition: 0.3s;
       position: relative;
       padding: 5px 0;
+      font-family: "Orbitron", sans-serif;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
     }
 
     nav a::after {
@@ -135,10 +184,12 @@
       height: 2px;
       background: var(--primary);
       transition: width 0.3s ease;
+      box-shadow: var(--neon-glow);
     }
 
     nav a:hover {
-      color: white;
+      color: var(--primary);
+      text-shadow: 0 0 5px var(--primary);
     }
 
     nav a:hover::after {
@@ -146,41 +197,59 @@
     }
 
     section {
-      padding: 100px 0;
+      padding: 120px 0;
+      position: relative;
+    }
+
+    section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--primary), transparent);
     }
 
     section h2 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       color: var(--primary);
       margin-bottom: 20px;
-      font-weight: 600;
+      font-weight: 700;
       text-align: center;
+      font-family: "Orbitron", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
     }
 
     .section-subtitle {
       text-align: center;
       max-width: 700px;
-      margin: 0 auto 50px;
+      margin: 0 auto 60px;
       color: var(--text-light);
-      font-size: 1.1rem;
+      font-size: 1.2rem;
+      font-weight: 300;
+      letter-spacing: 1px;
     }
 
     .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       gap: 30px;
       margin-top: 30px;
     }
 
     .card {
-      background-color: var(--accent);
+      background: linear-gradient(145deg, rgba(26, 26, 58, 0.8), rgba(10, 10, 31, 0.9));
       border-radius: 16px;
       padding: 40px 30px;
       box-shadow: var(--shadow);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.4s ease;
+      border: 1px solid rgba(0, 240, 255, 0.1);
       position: relative;
       overflow: hidden;
+      backdrop-filter: blur(10px);
     }
 
     .card::before {
@@ -193,26 +262,46 @@
       background: var(--gradient);
     }
 
+    .card::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(0, 240, 255, 0.1) 0%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
     .card:hover {
       transform: translateY(-10px);
-      box-shadow: var(--shadow-lg);
+      box-shadow: var(--shadow-lg), var(--neon-glow);
+      border-color: rgba(0, 240, 255, 0.3);
+    }
+
+    .card:hover::after {
+      opacity: 1;
     }
 
     .card-icon {
-      font-size: 2.5rem;
+      font-size: 3rem;
       color: var(--primary);
       margin-bottom: 20px;
+      text-shadow: 0 0 10px var(--primary);
     }
 
     .card h3 {
       color: white;
       margin-bottom: 15px;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       font-weight: 600;
+      font-family: "Orbitron", sans-serif;
     }
 
     .card p {
       color: var(--text-light);
+      line-height: 1.7;
     }
 
     .tech-list {
@@ -224,32 +313,68 @@
     }
 
     .tech-item {
-      background-color: var(--accent);
-      padding: 12px 25px;
+      background: linear-gradient(145deg, rgba(26, 26, 58, 0.8), rgba(10, 10, 31, 0.9));
+      padding: 15px 30px;
       border-radius: 50px;
       font-weight: 500;
       box-shadow: var(--shadow);
       transition: all 0.3s ease;
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(0, 240, 255, 0.1);
+      font-family: "Orbitron", sans-serif;
+      letter-spacing: 1px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tech-item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.2), transparent);
+      transition: left 0.5s ease;
     }
 
     .tech-item:hover {
       background-color: var(--accent-light);
-      transform: translateY(-3px);
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 240, 255, 0.3);
+      border-color: rgba(0, 240, 255, 0.3);
+    }
+
+    .tech-item:hover::before {
+      left: 100%;
     }
 
     footer {
-      background-color: var(--accent);
+      background: linear-gradient(to top, rgba(10, 10, 31, 0.95), rgba(26, 26, 58, 0.9));
       text-align: center;
-      padding: 60px 20px;
+      padding: 80px 20px;
       margin-top: 50px;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      border-top: 1px solid rgba(0, 240, 255, 0.2);
+      position: relative;
+    }
+
+    footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--primary), transparent);
     }
 
     footer h3 {
-      font-size: 1.8rem;
+      font-size: 2.2rem;
       margin-bottom: 15px;
-      color: white;
+      color: var(--primary);
+      font-family: "Orbitron", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
     }
 
     footer p {
@@ -262,20 +387,38 @@
       align-items: center;
       gap: 10px;
       margin-top: 30px;
-      background-color: #25d366;
+      background: linear-gradient(135deg, #25d366, #1ebe5d);
       color: white;
-      padding: 16px 32px;
+      padding: 18px 35px;
       border-radius: 50px;
       font-weight: 600;
       text-decoration: none;
       transition: all 0.3s ease;
       box-shadow: var(--shadow);
+      font-family: "Orbitron", sans-serif;
+      letter-spacing: 1px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-whatsapp::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s ease;
     }
 
     .btn-whatsapp:hover {
-      background-color: #1ebe5d;
-      transform: translateY(-3px);
+      transform: translateY(-5px);
       box-shadow: var(--shadow-lg);
+    }
+
+    .btn-whatsapp:hover::before {
+      left: 100%;
     }
 
     .contact-info {
@@ -291,18 +434,56 @@
       align-items: center;
       gap: 10px;
       color: var(--text-light);
+      padding: 15px 25px;
+      border-radius: 10px;
+      background: rgba(26, 26, 58, 0.5);
+      transition: all 0.3s ease;
+    }
+
+    .contact-item:hover {
+      background: rgba(26, 26, 58, 0.8);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     }
 
     .contact-item i {
       color: var(--primary);
-      font-size: 1.2rem;
+      font-size: 1.3rem;
+      text-shadow: 0 0 5px var(--primary);
     }
 
-    /* Animação de entrada */
+    /* Animações */
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes blink {
+      0%, 100% {
+        border-color: var(--primary);
+      }
+      50% {
+        border-color: transparent;
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
     .fade-in {
       opacity: 0;
       transform: translateY(30px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+      transition: opacity 0.8s ease, transform 0.8s ease;
     }
 
     .fade-in.visible {
@@ -310,18 +491,42 @@
       transform: translateY(0);
     }
 
+    .float {
+      animation: float 5s ease-in-out infinite;
+    }
+
+    /* Partículas */
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .particle {
+      position: absolute;
+      background: var(--primary);
+      border-radius: 50%;
+      opacity: 0.3;
+      animation: float 10s infinite linear;
+    }
+
     /* Responsividade */
     @media (max-width: 768px) {
       header {
-        padding: 80px 20px 60px;
+        padding: 100px 20px 60px;
+        min-height: 80vh;
       }
       
       header h1 {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
       }
 
       section h2 {
-        font-size: 2rem;
+        font-size: 2.2rem;
       }
 
       nav {
@@ -331,6 +536,7 @@
 
       nav a {
         margin: 0 10px;
+        font-size: 0.8rem;
       }
 
       .services {
@@ -341,6 +547,15 @@
         flex-direction: column;
         gap: 20px;
       }
+
+      .logo {
+        width: 140px;
+        height: 140px;
+      }
+
+      .logo i {
+        font-size: 50px;
+      }
     }
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -348,9 +563,15 @@
 <body>
 
   <header>
+    <div class="particles" id="particles"></div>
     <div class="container">
-	<img src="logo_new.png" width="250" height="250">
-      <p>Soluções Inteligentes em Desenvolvimento Web e Tecnologia</p>
+      <div class="logo-container">
+        <div class="logo">
+          <i class="fas fa-robot"></i>
+        </div>
+      </div>
+      <h1>Connect<span style="color: #7d3cff">AI</span></h1>
+      <p class="typing-text">Soluções Inteligentes em Desenvolvimento Web e Tecnologia</p>
     </div>
   </header>
 
@@ -358,7 +579,7 @@
     <a href="#sobre">Sobre</a>
     <a href="#servicos">Serviços</a>
     <a href="#tecnologias">Tecnologias</a>
-	<a href="#parceiros">Parceiros e Clientes</a>
+    <a href="#parceiros">Parceiros</a>
     <a href="#contato">Contato</a>
   </nav>
 
@@ -375,7 +596,7 @@
   <section id="servicos">
     <div class="container">
       <h2>Nossos Serviços</h2>
-      <p class="section-subtitle">Oferecemos soluções completas para impulsionar <br> seu negócio no ambiente digital</p>
+      <p class="section-subtitle">Oferecemos soluções completas para impulsionar seu negócio no ambiente digital</p>
       <div class="services">
         <div class="card fade-in">
           <div class="card-icon">
@@ -423,30 +644,34 @@
     </div>
   </section>
   
- <!-- Parceiros e Clientes -->
- 
-   <section id="parceiros">
+  <section id="parceiros">
     <div class="container">
       <h2>Nossos Parceiros e Clientes</h2>
+      <p class="section-subtitle">Empresas que confiam em nossas soluções tecnológicas</p>
       <div class="services">
-	  
         <div class="card fade-in">
           <div class="card-icon">
-            <i class="fas fa-code"></i>
+            <i class="fas fa-handshake"></i>
           </div>
-          <!-- <h3>CI BRASIL</h3> -->
-          <p align="center"><a href="https://cibrasilcidade.com.br/" target="_blank"><img src="cibrasil.png" width="180" height="150"></a></p>
+          <h3>CI BRASIL</h3>
+          <p align="center" style="margin-top: 20px;">
+            <a href="https://cibrasilcidade.com.br/" target="_blank" style="display: inline-block; padding: 10px 20px; background: rgba(0, 240, 255, 0.1); border-radius: 10px; border: 1px solid rgba(0, 240, 255, 0.3); transition: all 0.3s ease;">
+              <span style="color: var(--primary); font-weight: 600;">Visitar Site</span>
+            </a>
+          </p>
         </div>
 
         <div class="card fade-in">
           <div class="card-icon">
-            <i class="fas fa-code"></i>
+            <i class="fas fa-handshake"></i>
           </div>
-          <!-- <h3>OSCIP - AMVCA</h3> -->
-          <p align="center"><a href="https://amvca.com.br/" target="_blank"><img src="amvca.png" width="180" height="100"></a></p>
+          <h3>OSCIP - AMVCA</h3>
+          <p align="center" style="margin-top: 20px;">
+            <a href="https://amvca.com.br/" target="_blank" style="display: inline-block; padding: 10px 20px; background: rgba(0, 240, 255, 0.1); border-radius: 10px; border: 1px solid rgba(0, 240, 255, 0.3); transition: all 0.3s ease;">
+              <span style="color: var(--primary); font-weight: 600;">Visitar Site</span>
+            </a>
+          </p>
         </div>
-
-
       </div>
     </div>
   </section>
@@ -526,6 +751,50 @@
     fadeElements.forEach(element => {
       fadeInObserver.observe(element);
     });
+
+    // Sistema de partículas
+    function createParticles() {
+      const particlesContainer = document.getElementById('particles');
+      const particleCount = 50;
+      
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        
+        const size = Math.random() * 5 + 1;
+        const posX = Math.random() * 100;
+        const posY = Math.random() * 100;
+        const delay = Math.random() * 10;
+        const duration = Math.random() * 10 + 10;
+        
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.left = `${posX}%`;
+        particle.style.top = `${posY}%`;
+        particle.style.animationDelay = `${delay}s`;
+        particle.style.animationDuration = `${duration}s`;
+        
+        particlesContainer.appendChild(particle);
+      }
+    }
+    
+    createParticles();
+
+    // Efeito de digitação
+    const typingElement = document.querySelector('.typing-text');
+    const text = typingElement.textContent;
+    typingElement.textContent = '';
+    
+    let i = 0;
+    function typeWriter() {
+      if (i < text.length) {
+        typingElement.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 100);
+      }
+    }
+    
+    setTimeout(typeWriter, 1000);
   </script>
 
 </body>
