@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ConnectAI | Desenvolvimento Web e Soluções Inteligentes</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <style>
     :root {
       --primary: #00f0ff;
@@ -557,8 +558,16 @@
         font-size: 50px;
       }
     }
+
+	.services a.card {
+	  display: block;
+	  color: inherit;
+	}
+	.services a.card:hover {
+	  text-decoration: none;
+	}
+	
   </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -643,37 +652,30 @@
       </div>
     </div>
   </section>
-  
-  <section id="parceiros">
-    <div class="container">
-      <h2>Nossos Parceiros e Clientes</h2>
-      <p class="section-subtitle">Empresas que confiam em nossas soluções tecnológicas</p>
-      <div class="services">
-        <div class="card fade-in">
-          <div class="card-icon">
-            <i class="fas fa-handshake"></i>
-          </div>
-          <h3>CI BRASIL</h3>
-          <p align="center" style="margin-top: 20px;">
-            <a href="https://cibrasilcidade.com.br/" target="_blank" style="display: inline-block; padding: 10px 20px; background: rgba(0, 240, 255, 0.1); border-radius: 10px; border: 1px solid rgba(0, 240, 255, 0.3); transition: all 0.3s ease;">
-              <span style="color: var(--primary); font-weight: 600;">Visitar Site</span>
-            </a>
-          </p>
+
+<section id="parceiros">
+  <div class="container">
+    <h2>Nossos Parceiros e Clientes</h2>
+    <p class="section-subtitle">Empresas que confiam em nossas soluções tecnológicas</p>
+    <div class="services">
+      <a href="https://cibrasilcidade.com.br/" target="_blank" rel="noopener noreferrer" class="card fade-in" style="text-decoration:none;">
+        <div class="card-icon">
+          <i class="fas fa-handshake"></i>
         </div>
-        <div class="card fade-in">
-          <div class="card-icon">
-            <i class="fas fa-handshake"></i>
-          </div>
-          <h3>OSCIP - AMVCA</h3>
-          <p align="center" style="margin-top: 20px;">
-            <a href="https://amvca.com.br/" target="_blank" style="display: inline-block; padding: 10px 20px; background: rgba(0, 240, 255, 0.1); border-radius: 10px; border: 1px solid rgba(0, 240, 255, 0.3); transition: all 0.3s ease;">
-              <span style="color: var(--primary); font-weight: 600;">Visitar Site</span>
-            </a>
-          </p>
+        <h3>CI BRASIL</h3>
+        <p style="margin-top:20px;color: var(--primary); font-weight:600; text-align:center;">Visitar Site</p>
+      </a>
+      <a href="https://amvca.com.br/" target="_blank" rel="noopener noreferrer" class="card fade-in" style="text-decoration:none;">
+        <div class="card-icon">
+          <i class="fas fa-handshake"></i>
         </div>
-      </div>
+        <h3>OSCIP - AMVCA</h3>
+        <p style="margin-top:20px;color: var(--primary); font-weight:600; text-align:center;">Visitar Site</p>
+      </a>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <section id="tecnologias">
     <div class="container">
